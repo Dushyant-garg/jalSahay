@@ -13,8 +13,8 @@ const Team = () => {
                 <div className="container" data-aos="fade-up">
 
                     <div className="section-title">
-                        <h2 className='cat-h2'>Team</h2>
-                        <h3><span className='cat-span'>Our Team</span></h3>
+                        <h2 className='cat-h2' style={{ "fontFamily": "'Oswald', sans-serif" }}>Team</h2>
+                        <h3><span className='cat-span' style={{ "fontFamily": "'Oswald', sans-serif" }}>Our Team</span></h3>
                         <p></p>
                     </div>
 

@@ -59,10 +59,6 @@ export const FirebaseProvider = (props) => {
             coordinates,
             imageURL: uploadResult.ref.fullPath,
             status,
-            // userID: user.uid,
-            // userEmail: user.email,
-            // displayName: user.displayName,
-            // photoURL: user.photoURL,
         });
     };
 //GET ALL COMPALAINTS
@@ -107,6 +103,14 @@ export const FirebaseProvider = (props) => {
         const result = await getDocs(q);
         return result;
     };
+
+//FETCH COMPLAINTS USING STATUS
+const fetchMyComplaintsUsingName = async () => {
+    const collectionRef = collection(firestore, "Complaints");
+    const q = query(collectionRef, where("name", "==", "CCTV"));
+    const result = await getDocs(q);
+    return result;
+};
 //UPDATE STATUS
     const updateStatus = async (statusId, value) => {
         const docRef = doc(firestore, "Complaints", statusId);
@@ -134,6 +138,7 @@ export const FirebaseProvider = (props) => {
                 fetchMyComplaints,
                 fetchMyComplaintsUsingLocation,
                 fetchMyComplaintsUsingStatus,
+                fetchMyComplaintsUsingName,
                 updateStatus,
                 isLoggedIn,
                 user,

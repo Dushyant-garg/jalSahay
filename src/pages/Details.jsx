@@ -12,6 +12,7 @@ const Details = () => {
     const [data, setData] = useState(null);
     const [url, setURL] = useState(null);
     const [status, setStatus] = useState(data?.status)
+    const [assign, setAssign] = useState('')
     const [latitude, setLatitude] = useState(0)
     const [longitude, setLongitude] = useState(0)
 
@@ -59,7 +60,7 @@ const Details = () => {
             <Sidebar />
             <section id="content">
                 <nav>
-                    <div class="navbar-heading">Details for {data?.problem}</div>
+                    <div class="navbar-heading">Details for {data?.category}</div>
                 </nav>
                 <main>
                     <div class="details-content">
@@ -67,9 +68,9 @@ const Details = () => {
                         <h2>Detailed View</h2>
                         <div class="info-card detailed">
                             <div class="text">
-                                <div class="details mb-4">
+                                {/* <div class="details mb-4">
                                     <div><strong><center>{data?.problem}</center></strong></div>
-                                </div>
+                                </div> */}
 
                                 <img src={url} alt="Details" />
 
@@ -107,18 +108,32 @@ const Details = () => {
                                     <div><strong>Status:</strong></div>
                                     <div>{data?.status}</div>
                                 </div>
+                                <div className="details">
+                                    <div><strong>Assigned to:</strong></div>
+
+                                    <select className="form-select dropbtn w-75" aria-label="Default select example" value={assign} onChange={(e) => setAssign(e.target.value)}>
+                                        <option >Assign Query</option>
+                                        <option value="team 1">team 1</option>
+                                        <option value="team 2">team 2</option>
+                                        <option value="team 3">team 3</option>
+                                        <option value="team 4">team 4</option>
+                                    </select>
+                                    {/* </div>
+                                <div class="details"> */}
+                                    <div>{assign}</div>
+                                </div>
                                 <div class="details">
                                     <div><strong>Date and Time:</strong></div>
-                                    <div>Timestamp for when the detailed view was accessed.</div>
+                                    <div>12/5/2023</div>
                                 </div>
 
                                 <LoadScript googleMapsApiKey="AIzaSyDGbUWydl_Q_3jUKgdPA-MfNEKq-KLwn2g">
                                     <GoogleMap mapContainerStyle={mapStyles} zoom={10} center={defaultCenter}>
-                                        <Marker position={{ lat: parseFloat(latitude), lng: parseFloat(longitude) }} 
-                                            icon={{
-                                                url: 'https://w7.pngwing.com/pngs/731/25/png-transparent-location-icon-computer-icons-google-map-maker-marker-pen-cartodb-map-marker-heart-logo-color-thumbnail.png',
-                                                // scaledSize: new window.google.maps.Size(50, 50), // Adjust the size as needed
-                                              }}
+                                        <Marker position={{ lat: parseFloat(latitude), lng: parseFloat(longitude) }}
+                                        // icon={{
+                                        //     url: 'https://w7.pngwing.com/pngs/731/25/png-transparent-location-icon-computer-icons-google-map-maker-marker-pen-cartodb-map-marker-heart-logo-color-thumbnail.png',
+                                        //     // scaledSize: new window.google.maps.Size(50, 50), // Adjust the size as needed
+                                        //   }}
                                         />
                                     </GoogleMap>
                                 </LoadScript>

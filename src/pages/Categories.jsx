@@ -25,7 +25,7 @@ const Categories = () => {
       <Sidebar/>
       <section id="content">
         <nav className='dash-nav'>
-          <div class="navbar-heading">Dashboard</div>
+          <div class="navbar-heading" style={{ "color": "white" }}>Dashboard</div>
           <div class="form-input">
             <input type="search" value={search} onChange={(e) => setSearch(e.target.value)}
               placeholder="Search for location" />

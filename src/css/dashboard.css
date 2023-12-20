@@ -1,6 +1,6 @@
 /* Additional styles for the card layout */
 .dash-body {
-  background-color: rgb(219, 236, 251);
+  background-color: rgb(225, 251, 218);
 }
 
 .details-content {
@@ -59,7 +59,7 @@
 .info-card {
   width: calc(30% - 20px);
   margin-bottom: 20px;
-  background-color: #fff;
+  background-color: #55c7e42b;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
   overflow: hidden;
@@ -135,13 +135,13 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #2793dd;
+  background-color: #0099cc;
   padding: 15px;
   /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
 }
 
 .navbar-heading {
-  font-size: 24px;
+  font-size: 34px;
   font-weight: bold;
   font-family: 'Oswald', sans-serif;
 }
@@ -174,7 +174,6 @@
   font-size: large;
   font-weight: 500;
   border: 2px solid #026586;
-  border-radius: 10%;
 }
 
 .sort-dropbtn {
@@ -184,11 +183,6 @@
   border: none;
   border-radius: 8px;
   margin-left: 10px
-    /* color: white; */
-    /* font-size: large; */
-    /* font-weight: 500; */
-    /* border: 2px solid #026586; */
-    /* border-radius: 10%; */
 }
 
 .categories-dropdown {
@@ -264,7 +258,7 @@
 .raised-queries h2 {
   width: 100%;
   text-align: center;
-  font-size: 24px;
+  font-size: 30px;
   font-weight: bold;
   margin-bottom: 20px;
 }

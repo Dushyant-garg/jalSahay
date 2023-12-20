@@ -53,15 +53,17 @@ const Dashboard = () => {
             <button type="submit" onClick={(e) => navigate(`/search/${search}`)} class="search-btn"><i class='bx bx-search' ></i></button>
           </div>
           <div>
-            <button className='btn btn-light' onClick={(e) => setList(!list)}>{list ? "Card View" : "List View"}</button>
-            <div class="categories-dropdown">
-              <button class="sort-dropbtn">Sort</button>
-              <div class="categories-dropdown-content">
-                <a href="#">Distance</a>
-                <a href="#">Problem</a>
-                <a href="#">Population</a>
-                {/* <a href="#">Category 4</a> */}
-              </div>
+            <button className='btn btn-light w-100 mb-2' onClick={(e) => setList(!list)}>{list ? "Card View" : "List View"}</button>
+          
+            <div class="dropdown">
+              <button class="btn btn-light dropdown-toggle w-100" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Sort
+              </button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Distance</a></li>
+                <li><a class="dropdown-item" href="#">Problem</a></li>
+                <li><a class="dropdown-item" href="#">Population</a></li>
+              </ul>
             </div>
             {/* <button className='btn btn-light mx-2'>Sort</button> */}
           </div>
@@ -69,9 +71,9 @@ const Dashboard = () => {
         </nav>
         <About />
         <div class="raised-queries">
-          <h2>Raised Queries</h2>
+          
+          <h2 style={{ "fontFamily": "'Oswald', sans-serif" }}>Raised Queries</h2>
           {list ? <>
-            <h2>List view enabled</h2>
             <div className="table-responsive" style={{ "width": "100%" }}>
               <table className="table table-info align-middle table-striped">
                 <thead>
@@ -88,7 +90,7 @@ const Dashboard = () => {
                   {floodData.map(cmp => (
                     <tr>
                       <th scope="row">{cmp.id}</th>
-                      <td>{cmp.data().problem}</td>
+                      <td>{cmp.data().category}</td>
                       {/* <td>{firebase.getImageURL(cmp.data().imageURL)}</td> */}
                       <td>{cmp.data().city}</td>
                       <td>{cmp.data().status}</td>
@@ -98,7 +100,7 @@ const Dashboard = () => {
                   {drainageData.map(cmp => (
                     <tr>
                       <th scope="row">{cmp.id}</th>
-                      <td>{cmp.data().problem}</td>
+                      <td>{cmp.data().category}</td>
                       {/* <td>{cmp.data().imageURL}</td> */}
                       <td>{cmp.data().city}</td>
                       <td>{cmp.data().status}</td>
@@ -108,7 +110,7 @@ const Dashboard = () => {
                   {potholesData.map(cmp => (
                     <tr>
                       <th scope="row">{cmp.id}</th>
-                      <td>{cmp.data().problem}</td>
+                      <td>{cmp.data().category}</td>
                       {/* <td>{cmp.data().imageURL}</td> */}
                       <td>{cmp.data().city}</td>
                       <td>{cmp.data().status}</td>
@@ -118,7 +120,7 @@ const Dashboard = () => {
                   {leakageData.map(cmp => (
                     <tr>
                       <th scope="row">{cmp.id}</th>
-                      <td>{cmp.data().problem}</td>
+                      <td>{cmp.data().category}</td>
                       {/* <td>{cmp.data().imageURL}</td> */}
                       <td>{cmp.data().city}</td>
                       <td>{cmp.data().status}</td>

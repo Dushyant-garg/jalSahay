@@ -15,9 +15,9 @@ const ComplaintCard = (props) => {
         <div class="text">
             <img src={url} alt="Raised Image 1" />
             <div class="details">
-                <div><strong>Problem:  </strong>
+                {/* <div><strong>Problem:  </strong>
                     <span>{props.problem}</span>
-                </div>
+                </div> */}
             </div>
             <div class="details">
                 <div><strong>Category:  </strong>

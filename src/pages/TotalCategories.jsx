@@ -13,8 +13,8 @@ const TotalCategories = () => {
                 <div className="container" data-aos="fade-up">
 
                     <div className="section-title">
-                        <h2 className='cat-h2'>Problem Categorisation</h2>
-                        <h3><span className="cat-span">Our Categorisation</span></h3>
+                        <h2 className='cat-h2' style={{ "fontFamily": "'Oswald', sans-serif" }}>Problem Categorisation</h2>
+                        <h3><span className="cat-span" style={{ "fontFamily": "'Oswald', sans-serif" }}>Our Categorisation</span></h3>
                         <div className="card-container">
                             <div className="card">
                                 <Link to={`/categories/Flood`}>

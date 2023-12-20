@@ -41,11 +41,11 @@ const Header = () => {
             <div className="top-bar2">
                 <nav id="navbar" className="navbar">
                     <ul>
-                        <li><a className="nav-link scrollto active" href="#hero">Home</a></li>
-                        <li><a className="nav-link scrollto" href="#counts">About</a></li>
-                        <li><a className="nav-link scrollto" href="#services">Services</a></li>
-                        <li><a className="nav-link scrollto" href="#team">Team</a></li>
-                        <li><a className="nav-link scrollto" href="#contact">Contact</a></li>
+                        <li><a style={{ "fontFamily": "'Oswald', sans-serif" }}  className="nav-link scrollto active" href="#hero">Home</a></li>
+                        <li><a style={{ "fontFamily": "'Oswald', sans-serif" }} className="nav-link scrollto" href="#counts">About</a></li>
+                        <li><a style={{ "fontFamily": "'Oswald', sans-serif" }} className="nav-link scrollto" href="#services">Services</a></li>
+                        <li><a style={{ "fontFamily": "'Oswald', sans-serif" }} className="nav-link scrollto" href="#team">Team</a></li>
+                        <li><a style={{ "fontFamily": "'Oswald', sans-serif" }} className="nav-link scrollto" href="#contact">Contact</a></li>
                     </ul>
                     <i className="bi bi-list mobile-nav-toggle"></i>
                 </nav>
@@ -68,13 +68,13 @@ const Header = () => {
                 <div className="bg-display">
                     <div id="carouselExampleControls" className="carousel slide" data-bs-ride="carousel">
                         <div className="carousel-inner">
-                            <div className="carousel-item active" data-bs-interval='1800'>
+                            <div className="carousel-item active" data-bs-interval='2100'>
                                 <img src='./lastsj.svg' className="d-block w-100" alt="..." />
                             </div>
-                            <div className="carousel-item" data-bs-interval='1800'>
+                            <div className="carousel-item" data-bs-interval='2100'>
                                 <img src="./c2.svg" className="d-block w-100" alt="..." />
                             </div>
-                            <div className="carousel-item" data-bs-interval='1800'>
+                            <div className="carousel-item" data-bs-interval='2100'>
                                 <img src="./c3.svg" className="d-block w-100" alt="..." />
                             </div>
                         </div>

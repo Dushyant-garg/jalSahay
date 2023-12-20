@@ -1,0 +1,66 @@
+.container-chart {
+    display: flex;
+    /*flex-direction: column;*/
+    height: 100vh;
+    /* 100% of the viewport height */
+}
+
+.half {
+    flex: 1;
+    border: none;
+    /* Optional: Add a border for better visibility */
+}
+
+.half1 {
+    display: flex;
+    height: 100vh;
+    /* 100% of the viewport height */
+}
+
+.half2 {
+    display: flex;
+    height: 100vh;
+    /* 100% of the viewport height */
+}
+
+
+.third {
+    flex: 1;
+    border: none;
+    /* Optional: Add a border for better visibility */
+}
+ 
+.pie {
+    margin-left: -50px;
+    margin-top: -80px;
+}
+.line{
+    margin-bottom: -1850px;
+    margin-left: -817px;
+    height:600px;
+    width:800px;
+}
+.reg-graph{
+    margin-left: -100px;
+    margin-bottom: -417px;
+}
+/* .pie img{
+    margin-left: -150px;
+} */ */
+
+.third3 img{
+    margin-left: -300px;
+}
+
+.ctg {
+    margin-right: -80px;
+    margin-top: -380px;
+}
+
+.rsv-img {
+    margin-top: -200px;
+}
+
+.heading-chart {
+    font-size: xx-large;
+}
